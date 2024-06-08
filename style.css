@@ -1,0 +1,258 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --brand-primary: hsl(195, 46%, 40%);
+  --title-primary: hsl(240, 6%, 13%);
+  --text-primary: hsl(240, 5%, 7%);
+  --brad-search:hsla(0, 0%, 100%, 0.2);
+  --color-search: hsl(0, 0%, 100%);
+
+
+  --text-sm: 1.4rem;
+  --text-base:1rem;
+  }
+
+
+html{
+   font: 400 var(--text-base)/160% "Mulish",sans-serif;
+   color: var(--text-primary);
+}
+
+header{
+  background-color: var(--brand-primary);
+}
+
+header .container{
+  max-width: 23.375rem;
+  padding: 0.8rem 1.75rem;
+  display: flex;
+
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 1.625rem;
+  margin: 3rem;
+}
+
+
+
+header a {
+  line-height: 0;
+}
+
+.avatar{
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+}
+
+
+aside img{
+  width: 100%;
+  height: auto;
+}
+
+main img{
+  width: 100%;
+  height: auto;
+}
+
+.photo img{
+  padding-top: 1.2rem;
+  padding-left: 2.5rem;
+  width: 90%;
+  height: auto;
+}
+
+img{
+  transition: all 300ms;
+}
+
+img:hover{
+  scale: 1.1;
+}
+
+
+.text-sm{
+  font-size: var(--text-sm);
+}
+
+
+form input{
+  height: 2.5rem;
+  padding: 1.5rem;
+  border: 0;
+  border-radius: .5rem;
+  align-items: center;
+  background: var(--brad-search);
+  
+  font-weight: 600;
+  line-height: 100%;
+  color: white;
+}
+
+header form input::placeholder{
+  color: #fff;
+}
+
+h3{
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+main h1{
+  margin-top: 2.3rem;
+  font-size: 1.6rem;
+  font-weight: 800
+}
+
+main .buttons{
+  margin-top: .5rem;
+}
+
+main p{
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+button{
+  background-color: var(--brand-primary);
+  border: 0;
+  transition: all 300ms;
+  border-radius: 50%;
+  height: 3.2rem;
+  width: 3.2rem;
+  margin: 0.5rem .2rem;
+  padding: .3rem;
+  align-items: center;
+}
+
+button:hover{
+  transform: scale(1.1) rotate(10deg);
+}
+
+aside{
+  margin-top: 1rem;
+}
+
+aside section{
+  margin-top: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+aside h2{
+  margin-top: 1.2rem;
+}
+
+section article{
+  display: grid;
+  grid-template-columns: 9.375rem 1fr;
+
+  gap: 1rem;
+}
+
+section article p {
+  margin-top:0.75rem;
+}
+
+footer{
+  background-color: var(--brand-primary);
+  color: white;
+  text-align: center;
+  padding-block:1.5rem;
+  margin-top: 1.5rem ;
+}
+
+@media (width > 80rem) {
+  img{
+    border-radius: 5px;
+  }
+
+  #app {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+    justify-content: center;
+    height: 100vh;
+    gap: 2.5rem 2rem;
+  }
+  
+  
+  }
+header 
+.container,
+  .container{
+    max-width: initial;
+    padding: initial;
+    margin: initial;
+  }
+
+  header{
+    grid-area: header;
+  }
+
+  header form input{
+    width: 100%;
+  }
+
+  header .container{
+    max-width: 76rem;
+    margin-inline: auto;
+  }
+
+  header form{
+    flex: 1;
+  }
+
+  main{
+    grid-area: main;
+  }
+
+  main .container{
+    max-width: 80rem;
+    margin-left: auto;
+  }
+
+  aside{
+    grid-area: aside;
+  }
+
+  aside .container{
+    max-width: 24rem;
+  }
+
+  footer{
+    grid-area: footer;
+  }
+
+  main, aside{
+    animation: frombottom 800ms 100ms backwards;
+  }
+
+  header{
+    animation: fromtop 600ms 400ms backwards;
+  }
+
+  @keyframes fromtop {
+    from{
+      opacity: 0;
+      transform: translateY(-100%);
+    }    
+  }
+
+
+  @keyframes frombottom{
+    from{
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  }
